@@ -1,15 +1,6 @@
 {
-  "name": "design-patterns",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
   "dependencies": {
+    "gh-pages": "^6.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "styled-components": "^6.1.13"
@@ -26,5 +17,17 @@
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
     "vite": "^5.4.10"
-  }
+  },
+  "homepage": "./",
+  "name": "design-patterns",
+  "private": true,
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "deploy": "bash deploy.sh",
+    "dev": "vite",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "version": "0.0.0"
 }

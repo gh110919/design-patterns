@@ -27,18 +27,6 @@ export const Index = (_props?: TProps) => {
 const Paragraph = styled.div`
   ${(p) => (p.className = "Paragraph")};
   display: flex;
-  font-size: calc(16 * var(--dv));
-  @media (max-width: 64rem) {
-    font-size: calc(16 * var(--tv));
-  }
-  @media (max-width: 48rem) {
-    font-size: calc(16 * var(--mv));
-  }
-`;
-
-const Title = styled.strong`
-  ${(p) => (p.className = "Title")};
-  display: flex;
   font-size: calc(24 * var(--dv));
   @media (max-width: 64rem) {
     font-size: calc(24 * var(--tv));
@@ -48,11 +36,29 @@ const Title = styled.strong`
   }
 `;
 
+const Title = styled.strong`
+  ${(p) => (p.className = "Title")};
+  display: flex;
+  font-size: calc(48 * var(--dv));
+  @media (max-width: 64rem) {
+    font-size: calc(48 * var(--tv));
+  }
+  @media (max-width: 48rem) {
+    font-size: calc(48 * var(--mv));
+  }
+`;
+
 const Card = styled.div`
   ${(p) => (p.className = "Card")};
   display: flex;
   flex-direction: column;
   gap: calc(16 * var(--dv));
+  @media (max-width: 64rem) {
+    gap: calc(16 * var(--tv));
+  }
+  @media (max-width: 48rem) {
+    gap: calc(16 * var(--mv));
+  }
 `;
 
 const Item = styled.li`
@@ -60,6 +66,12 @@ const Item = styled.li`
   display: flex;
   outline: calc(1 * var(--dv)) solid;
   padding: calc(16 * var(--dv));
+  @media (max-width: 64rem) {
+    padding: calc(16 * var(--tv));
+  }
+  @media (max-width: 48rem) {
+    padding: calc(16 * var(--mv));
+  }
 `;
 
 const List = styled.ul`
@@ -69,9 +81,11 @@ const List = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   @media (max-width: 64rem) {
     grid-template-columns: repeat(2, 1fr);
+    gap: calc(32 * var(--tv));
   }
   @media (max-width: 48rem) {
     grid-template-columns: repeat(1, 1fr);
+    gap: calc(32 * var(--mv));
   }
 `;
 
@@ -79,4 +93,12 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   padding: calc(64 * var(--dv));
+  @media (max-width: 64rem) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: calc(64 * var(--tv));
+  }
+  @media (max-width: 48rem) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: calc(64 * var(--mv));
+  }
 `;
